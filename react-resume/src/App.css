@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 .App {
   text-align: center;
 }
@@ -34,5 +36,19 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.main-fade {
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100;
   }
 }

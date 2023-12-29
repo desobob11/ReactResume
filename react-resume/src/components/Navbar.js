@@ -27,7 +27,7 @@ import SquareFootOutlinedIcon from '@mui/icons-material/SquareFootOutlined';
 
 
 
-export default function Navbar() {
+export default function Navbar(props) {
 
     const theme = createTheme({
         components: {
@@ -50,7 +50,9 @@ export default function Navbar() {
     const mainListItems = (
             <ThemeProvider theme={theme}>
             <React.Fragment>
-            <ListItemButton sx={{"&:hover":{backgroundColor:"transparent"}}}>
+            <ListItemButton sx={{"&:hover":{backgroundColor:"transparent"}}} onClick={() => {
+                    props.aboutRef.current.scrollIntoView({ behavior: "smooth" });
+            }}>
                     <ListItemIcon>
                     <SentimentSatisfiedAltOutlinedIcon className="icon" sx={{color:"DodgerBlue"}}/>
                     </ListItemIcon>
