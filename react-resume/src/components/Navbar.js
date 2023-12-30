@@ -2,14 +2,7 @@ import * as React from 'react';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
-import ReceiptIcon from '@mui/icons-material/Receipt';
-import PeopleIcon from '@mui/icons-material/People';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
-import HouseIcon from '@mui/icons-material/House';
+import {useEffect} from 'react'
 
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -22,29 +15,44 @@ import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSati
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import SquareFootOutlinedIcon from '@mui/icons-material/SquareFootOutlined';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import '../index.css'
+import '../App.css'
+import Brightness4 from '@mui/icons-material/Brightness4';
 
 
-
-
+function toggleDarkMode() {
+    if (window.darkMode == false) {
+        window.darkMode = true;
+    }
+    else {
+        window.darkMode = false;
+    }
+}
 
 export default function Navbar(props) {
-
     const theme = createTheme({
-        components: {
-            // Name of the component
-            MuiButtonBase: {
-                defaultProps: {
-                    // The props to change the default for.
-                    disableRipple: true, // No more ripple, on the whole application 💣!
-                },
+            components: {
+                // Name of the component
+                MuiButtonBase: {
+                    defaultProps: {
+                        // The props to change the default for.
+                        disableRipple: true, // No more ripple, on the whole application 💣!
+                    },
+                }
+            },
+            typography: {
+                allVariants: {
+                    color: "Black"
+                }
             }
-        },
-        typography: {
-            allVariants: {
-                color: "DodgerBlue"
-            }
-        }
-    });
+        });
+
+ 
+    
+
+    
+
 
 
     const mainListItems = (
@@ -54,9 +62,9 @@ export default function Navbar(props) {
                     props.aboutRef.current.scrollIntoView({ behavior: "smooth" });
             }}>
                     <ListItemIcon>
-                    <SentimentSatisfiedAltOutlinedIcon className="icon" sx={{color:"DodgerBlue"}}/>
+                    <SentimentSatisfiedAltOutlinedIcon className="icon" sx={{color:"Black"}}/>
                     </ListItemIcon>
-                <ListItemText primary={<Typography component="span" sx={{"&:hover":{textDecoration:"underline"}}}>
+                <ListItemText primary={<Typography component="span" sx={{"&:hover":{textDecoration:"underline"}, fontFamily:"Open Sans", fontWeight:"bold"}}>
                         <Box className="navbar-text">
                             About Me
                         </Box>
@@ -66,9 +74,9 @@ export default function Navbar(props) {
                     props.experienceRef.current.scrollIntoView({ behavior: "smooth" });
                 }}>
                     <ListItemIcon>
-                    <WorkOutlineOutlinedIcon className="icon" sx={{ color: "DodgerBlue" }} />
+                    <WorkOutlineOutlinedIcon className="icon" sx={{ color: "Black" }} />
                     </ListItemIcon>
-                    <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" } }}>
+                    <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" }, fontFamily: "Open Sans", fontWeight: "bold"  }}>
                         <Box className="navbar-text">
                             Experience
                         </Box>
@@ -76,9 +84,9 @@ export default function Navbar(props) {
                 </ListItemButton>
                 <ListItemButton sx={{ "&:hover": { backgroundColor: "transparent" } }}>
                     <ListItemIcon>
-                    <SchoolOutlinedIcon className="icon" sx={{ color: "DodgerBlue" }} />
+                    <SchoolOutlinedIcon className="icon" sx={{ color: "Black" }} />
                     </ListItemIcon>
-                    <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" } }}>
+                    <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" }, fontFamily: "Open Sans", fontWeight: "bold"  }}>
                         <Box className="navbar-text">
                             Education
                         </Box>
@@ -86,17 +94,31 @@ export default function Navbar(props) {
                 </ListItemButton>
                 <ListItemButton sx={{ "&:hover": { backgroundColor: "transparent" } }}>
                     <ListItemIcon>
-                    <SquareFootOutlinedIcon className="icon" sx={{ color: "DodgerBlue" }} />
+                    <SquareFootOutlinedIcon className="icon" sx={{ color: "Black" }} />
                     </ListItemIcon >
-                    <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" } }}>
+                    <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" }, fontFamily: "Open Sans", fontWeight: "bold"  }}>
                         <Box className="navbar-text" t>
-                            Personal Projects
+                            Projects
                         </Box>
                     </Typography>} />
                 </ListItemButton>
             </React.Fragment>
             </ThemeProvider >
         );
+
+        /*
+
+            <ListItemButton sx={{ "&:hover": { backgroundColor: "transparent" } }} onClick={toggleDarkMode}>
+                    <ListItemIcon>
+                        <Brightness4 className="icon" sx={{ color: "Black" }} />
+                    </ListItemIcon >
+                    <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" }, fontFamily: "Open Sans", fontWeight: "bold" }}>
+                        <Box className="navbar-text" t>
+                            Dark Mode
+                        </Box>
+                    </Typography>} />
+                </ListItemButton>
+        */
 
     return (
         <React.Fragment>

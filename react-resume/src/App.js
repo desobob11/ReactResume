@@ -12,7 +12,7 @@ import './index.css'
 const defaultTheme = createTheme();
 
 
-
+window.darkMode = false;
 
 function App() {
   return (
