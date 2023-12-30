@@ -52,3 +52,12 @@
     opacity: 100;
   }
 }
+
+
+.scrollable {
+  scroll-margin: 100px
+}
+
+.non-scrollable {
+  scroll-margin: 800px
+}

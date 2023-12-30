@@ -7,6 +7,8 @@ import App, { tablify, parse_bool, theme, get_columns } from "../App";
 import Navbar from './Navbar';
 import AboutSection from './AboutSection';
 import Headshot from './Headshot';
+import ExperienceSection from './ExperienceSection';
+import '../App.css'
 
 
 import Typography from '@mui/material/Typography';
@@ -36,15 +38,31 @@ export default function Homepage() {
 
 
     const aboutRef = useRef(null);
+    const experienceRef = useRef(null);
 
 
 
     return (
         <ThemeProvider theme={thisTheme}>
             <CssBaseline />
-        <Box display="flex">
-                <Navbar aboutRef={aboutRef}></Navbar>
-                <AboutSection></AboutSection>
+        <Box display="inline">
+                <Navbar aboutRef={aboutRef} experienceRef={experienceRef}></Navbar>
+                <AboutSection className={"main-fade"} ref={aboutRef}></AboutSection>
+                <ExperienceSection ref={experienceRef}></ExperienceSection>
+                <Typography variant="h1" sx={{color:"white"}}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+
         </Box>
         </ThemeProvider>
         
