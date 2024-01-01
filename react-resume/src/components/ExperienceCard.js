@@ -39,7 +39,7 @@ export default function ExperienceCard(props) {
 
     return (
         <Box>
-        <Card onClick={() => setIsOpen(!isOpen)} sx={{marginLeft:"11vw", marginTop:"30px", backgroundColor:"Ivory", width:"60vw", height:"10vh"}}>
+        <Card onClick={() => setIsOpen(!isOpen)} sx={{marginLeft:"11vw", marginTop:"30px", backgroundColor:"White", width:"75vw", height:"10vh"}}>
             <CardActionArea disableRipple sx={{width:"100%", height:"100%", display:'flex', justifyContent:"space-between"}}>
                 
                 <CardMedia
@@ -68,7 +68,7 @@ export default function ExperienceCard(props) {
             </CardActionArea>
 
         </Card>
-        <Box sx={{backgroundColor:"#fafafa", marginLeft:"11vw", borderRadius:"5px", width:"60vw", boxShadow:1}}>
+        <Box sx={{backgroundColor:"white", marginLeft:"11vw", borderRadius:"5px", width:"75vw", boxShadow:1}}>
             <Collapse in={isOpen} timeout="auto"
                 unmountOnExit>
                 <CardContent>
@@ -76,7 +76,8 @@ export default function ExperienceCard(props) {
                         height: 100,
                         lineHeight: 2,
                         fontFamily:"Open Sans",
-                        fontSize:"15px"
+                        fontSize:"15px",
+                        color:"DimGrey"
                     }}>
                         {props.jobText}
                     </Container>
@@ -92,3 +93,4 @@ export default function ExperienceCard(props) {
 
 }
 
+//"#fafafa"

@@ -27,8 +27,12 @@ export default function Homepage() {
     const thisTheme = createTheme({
         typography: {
             allVariants: {
-                color: "Black",
+                color: "DimGrey",
                 fontSize:100
+            },
+            h1: {
+                color: "DimGrey",
+                fontSize: 100
             }
         },
         palette: {

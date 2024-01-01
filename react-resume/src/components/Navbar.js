@@ -20,7 +20,7 @@ import '../index.css'
 import '../App.css'
 import Brightness4 from '@mui/icons-material/Brightness4';
 
-
+//#bdbdbd
 function toggleDarkMode() {
     if (window.darkMode == false) {
         window.darkMode = true;
@@ -43,7 +43,7 @@ export default function Navbar(props) {
             },
             typography: {
                 allVariants: {
-                    color: "Black"
+                    color: "DimGrey"
                 }
             }
         });
@@ -62,7 +62,7 @@ export default function Navbar(props) {
                     props.aboutRef.current.scrollIntoView({ behavior: "smooth" });
             }}>
                     <ListItemIcon>
-                    <SentimentSatisfiedAltOutlinedIcon className="icon" sx={{color:"Black"}}/>
+                        <SentimentSatisfiedAltOutlinedIcon className="icon" sx={{ color:"DimGrey"}}/>
                     </ListItemIcon>
                 <ListItemText primary={<Typography component="span" sx={{"&:hover":{textDecoration:"underline"}, fontFamily:"Open Sans", fontWeight:"bold"}}>
                         <Box className="navbar-text">
@@ -74,7 +74,7 @@ export default function Navbar(props) {
                     props.experienceRef.current.scrollIntoView({ behavior: "smooth" });
                 }}>
                     <ListItemIcon>
-                    <WorkOutlineOutlinedIcon className="icon" sx={{ color: "Black" }} />
+                        <WorkOutlineOutlinedIcon className="icon" sx={{ color: "DimGrey" }} />
                     </ListItemIcon>
                     <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" }, fontFamily: "Open Sans", fontWeight: "bold"  }}>
                         <Box className="navbar-text">
@@ -86,7 +86,7 @@ export default function Navbar(props) {
                     props.educationRef.current.scrollIntoView({ behavior: "smooth" });
                 }}>
                     <ListItemIcon>
-                    <SchoolOutlinedIcon className="icon" sx={{ color: "Black" }} />
+                        <SchoolOutlinedIcon className="icon" sx={{ color: "DimGrey" }} />
                     </ListItemIcon>
                     <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" }, fontFamily: "Open Sans", fontWeight: "bold"  }}>
                         <Box className="navbar-text">
@@ -96,7 +96,7 @@ export default function Navbar(props) {
                 </ListItemButton>
                 <ListItemButton sx={{ "&:hover": { backgroundColor: "transparent" } }}>
                     <ListItemIcon>
-                    <SquareFootOutlinedIcon className="icon" sx={{ color: "Black" }} />
+                        <SquareFootOutlinedIcon className="icon" sx={{ color: "DimGrey" }} />
                     </ListItemIcon >
                     <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" }, fontFamily: "Open Sans", fontWeight: "bold"  }}>
                         <Box className="navbar-text" t>
