@@ -24,10 +24,25 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link } from '@mui
 
 
 const AboutSection = forwardRef((props, ref) => {
+
+    var observer = null;
+    useEffect(() => {
+        observer = new IntersectionObserver(entries => {
+            entries.forEach(x => {
+                if (x.isIntersecting) {
+                   x.target.classList.add('main-fade');
+                }
+            });
+        });
+        observer.observe(document.querySelector('.fader'));
+    })
+
+
     return (
-        <Grid className={'main-fade non-scrollable'} ref={ref} container spacing={2} sx={{
+        <Grid className={'non-scrollable fader'} ref={ref} container spacing={2} sx={{
             marginTop: "15vh",
-            marginBottom: "40px"
+            marginBottom: "40px",
+            opacity:0
         }}>
 
             <Grid item xs={8} display='flex'>

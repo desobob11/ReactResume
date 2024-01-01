@@ -23,13 +23,26 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, C
 
 const EducationSection = forwardRef((props, ref) => {
 
-    const [open, setOpen] = useState(false);
+
+
+    var observer = null;
+    useEffect(() => {
+        observer = new IntersectionObserver(entries => {
+            entries.forEach(x => {
+                if (x.isIntersecting) {
+                    x.target.classList.add('main-fade');
+                }
+            });
+        });
+        observer.observe(document.querySelector('.edu-fade'));
+    })
 
 
 
     return (
-        <Grid className={'main-fade'} container spacing={0} sx={{
-            marginBottom: "40px"
+        <Grid className={'edu-fade'} container spacing={0} sx={{
+            marginBottom: "40px",
+            opacity:0
         }}>
 
 
