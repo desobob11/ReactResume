@@ -9,6 +9,8 @@ import AboutSection from './AboutSection';
 import Headshot from './Headshot';
 import ExperienceSection from './ExperienceSection';
 import '../App.css'
+import EducationSection from './EducationSection';
+import Ellipses from './Ellipses';
 
 
 import Typography from '@mui/material/Typography';
@@ -39,31 +41,36 @@ export default function Homepage() {
 
     const aboutRef = useRef(null);
     const experienceRef = useRef(null);
+    const educationRef = useRef(null);
 
 
 
     return (
         <ThemeProvider theme={thisTheme}>
             <CssBaseline />
-        <Box display="inline">
-                <Navbar aboutRef={aboutRef} experienceRef={experienceRef}></Navbar>
+            <Navbar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef}></Navbar>
+        <Grid  container direction="column" justifyContent="flex-start" alignItems="stretch" rowSpacing={0}>
+            <Grid item >
                 <AboutSection className={"main-fade"} ref={aboutRef}></AboutSection>
+            </Grid>
+            <Grid item >
+                <Ellipses/>
+            </Grid>
+            <Grid item >
                 <ExperienceSection ref={experienceRef}></ExperienceSection>
-                <Typography variant="h1" sx={{color:"white"}}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
-                <Typography variant="h1" sx={{ color: "white" }}>Hello</Typography>
+            </Grid>
+            <Grid item >
+                <Ellipses />
+            </Grid>
+            <Grid item >
+                <EducationSection ref={educationRef}></EducationSection>
+            </Grid>
+            <Grid item>
+                <Ellipses />
+            </Grid>
 
-        </Box>
+
+        </Grid>
         </ThemeProvider>
         
 

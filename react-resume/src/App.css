@@ -55,9 +55,9 @@
 
 
 .scrollable {
-  scroll-margin: 100px
+  scroll-margin: 20vh
 }
 
 .non-scrollable {
-  scroll-margin: 800px
+  scroll-margin: 1000vh
 }

@@ -28,14 +28,12 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, C
 
 
         return (
-            <Grid className={'main-fade'}container spacing={2} sx={{
-                marginTop: "160px",
-                display: "inline-flex"
+            <Grid className={'main-fade'} container spacing={0} sx={{
+                marginBottom: "40px"
             }}>
 
 
                 <Grid item xs={8} display='flex' sx={{
-                    marginTop: "400px"
                 }}>
 
                     <Grid item xs={8} sx={{ width: "100px" }}>
@@ -46,15 +44,7 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, C
                         }}>
                             Experience
                         </Typography>
-                        <Typography sx={{
-                            fontFamily: "Open Sans",
-                            marginLeft: "190px",
-                            marginTop: "10px",
-                            fontSize: 30,
-                            width: "100",
-                            width: "40vw"
-                        }}>
-                        </Typography>
+
                         <ExperienceCard image={require('../resources/logo_bwb.png')}
                                         jobDescr={"Jr. Systems Analyst"}
                                         jobTime={"May 2023 - Present"}

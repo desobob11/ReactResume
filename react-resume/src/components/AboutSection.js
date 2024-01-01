@@ -26,8 +26,8 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link } from '@mui
 const AboutSection = forwardRef((props, ref) => {
     return (
         <Grid className={'main-fade non-scrollable'} ref={ref} container spacing={2} sx={{
-            marginTop: "160px",
-            display: "inline-flex"
+            marginTop: "15vh",
+            marginBottom: "40px"
         }}>
 
             <Grid item xs={8} display='flex'>

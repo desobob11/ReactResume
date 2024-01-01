@@ -48,10 +48,10 @@ export default function ExperienceCard(props) {
                 sx={{justifySelf:"left", height:"100px", width:"200px", objectFit:"contain", marginLeft:"10px"}}
                 ></CardMedia>
                 <CardContent sx={{marginLeft:"auto"}}>
-                <Typography sx={{fontFamily:"Open Sans", fontSize:"20px", fontWeight:"bold" }}>
+                <Typography align="right" sx={{fontFamily:"Open Sans", fontSize:"20px", fontWeight:"bold"}}>
                     {props.jobDescr}
                 </Typography>
-                <Typography sx={{ fontFamily: "Open Sans", fontSize: "15px"}}>
+                        <Typography align="right" sx={{ fontFamily: "Open Sans", fontSize: "15px", alight:"right"}}>
                     {props.jobTime}
                 </Typography>
                 
