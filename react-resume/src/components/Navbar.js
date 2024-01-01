@@ -136,7 +136,8 @@ export default function Navbar(props) {
             position:"fixed",
             marginLeft:"5%",
             borderBottomLeftRadius:"15px",
-            borderBottomRightRadius:"15px"
+            borderBottomRightRadius:"15px",
+            zIndex: 1
         }}
     >
         {mainListItems}

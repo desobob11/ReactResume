@@ -11,6 +11,8 @@ import '../index.css'
 import '../App.css'
 import ExperienceCard from './ExperienceCard';
 
+import {bwb_text} from '../resources/stringConsts.js'
+
 import Typography from '@mui/material/Typography';
 import { createTheme, makeStyles, ThemeProvider } from '@mui/material/styles';
 import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, Container, CardContent } from '@mui/material';
@@ -54,7 +56,9 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, C
                         }}>
                         </Typography>
                         <ExperienceCard image={require('../resources/logo_bwb.png')}
-                         jobDescr={"Jr. Systems Analyst"} jobTime={"May 2023 - Present"}
+                                        jobDescr={"Jr. Systems Analyst"}
+                                        jobTime={"May 2023 - Present"}
+                                        jobText={bwb_text}
                          ></ExperienceCard>
 
                         <ExperienceCard image={require('../resources/logo_msa.png')}
@@ -62,7 +66,11 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, C
 
 
                         <ExperienceCard image={require('../resources/logo_msa.png')}
-                            jobDescr={"Summer Student"} jobTime={"May 2022 - Sep 2022"}></ExperienceCard>
+                                        jobDescr={"Summer Student"} 
+                                        jobTime={"May 2022 - Sep 2022"}
+                                        jobText={"Hello"}
+
+                            ></ExperienceCard>
                         <ExperienceCard image={require('../resources/logo_rbc.png')}
                             jobDescr={"Client Advisor"} jobTime={"May 2021 - Oct 2021"}></ExperienceCard>
                         <ExperienceCard image={require('../resources/logo_nissan.png')}

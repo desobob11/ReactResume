@@ -1,0 +1,1 @@
+export const bwb_text = "Testing 123"

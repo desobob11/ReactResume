@@ -10,33 +10,80 @@ import { styled } from "@mui/material/styles";
 import '../index.css'
 import '../App.css'
 
+import {bwb_text} from '../resources/stringConsts.js'
+
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import KeyboardArrowDownIcon from
+    "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from
+    "@mui/icons-material/KeyboardArrowUp";
+
+
 
 import Typography from '@mui/material/Typography';
 import { createTheme, makeStyles, ThemeProvider } from '@mui/material/styles';
-import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, Container, CardContent, Card, CardActionArea, CardMedia} from '@mui/material';
+import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, Container, CardContent, Card, CardActionArea, CardMedia, IconButton} from '@mui/material';
 
 
 export default function ExperienceCard(props) {
 
+
+
+
+
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <Card sx={{marginLeft:"190px", marginTop:"30px", backgroundColor:"Ivory", width:"900px", height:"100px"}}>
-            <CardActionArea sx={{width:"100%", height:"100%", display:'flex', justifyContent:"space-between"}}>
+        <Box>
+        <Card onClick={() => setIsOpen(!isOpen)} sx={{marginLeft:"11vw", marginTop:"30px", backgroundColor:"Ivory", width:"60vw", height:"10vh"}}>
+            <CardActionArea disableRipple sx={{width:"100%", height:"100%", display:'flex', justifyContent:"space-between"}}>
+                
                 <CardMedia
                 component="img"
                 image={props.image}
                 sx={{justifySelf:"left", height:"100px", width:"200px", objectFit:"contain", marginLeft:"10px"}}
                 ></CardMedia>
-                <CardContent>
-                <Typography sx={{fontFamily:"Open Sans", fontSize:"20px", fontWeight:"bold"}}>
+                <CardContent sx={{marginLeft:"auto"}}>
+                <Typography sx={{fontFamily:"Open Sans", fontSize:"20px", fontWeight:"bold" }}>
                     {props.jobDescr}
                 </Typography>
                 <Typography sx={{ fontFamily: "Open Sans", fontSize: "15px"}}>
                     {props.jobTime}
                 </Typography>
+                
                 </CardContent>
-
+                <IconButton disableRipple
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label="expand"
+                    size="large"
+                    sx={{ "&:hover": { backgroundColor: "transparent" }}}
+                >
+                    {isOpen ? <KeyboardArrowUpIcon />
+                        : <KeyboardArrowDownIcon />}
+                </IconButton>          
             </CardActionArea>
+
         </Card>
+        <Box sx={{backgroundColor:"#fafafa", marginLeft:"11vw", borderRadius:"5px", width:"60vw", boxShadow:1}}>
+            <Collapse in={isOpen} timeout="auto"
+                unmountOnExit>
+                <CardContent>
+                    <Container sx={{
+                        height: 100,
+                        lineHeight: 2,
+                        fontFamily:"Open Sans",
+                        fontSize:"15px"
+                    }}>
+                        {props.jobText}
+                    </Container>
+                </CardContent>
+            </Collapse>
+            </Box> 
+        </Box >
     );
 
 
