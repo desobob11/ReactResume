@@ -11,7 +11,7 @@ import '../index.css'
 import '../App.css'
 import ExperienceCard from './ExperienceCard';
 
-import {bwb_text} from '../resources/stringConsts.js'
+import {bwb_text, msa2_text, msa1_text} from '../resources/stringConsts.js'
 
 import Typography from '@mui/material/Typography';
 import { createTheme, makeStyles, ThemeProvider } from '@mui/material/styles';
@@ -65,13 +65,13 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, C
                          ></ExperienceCard>
 
                         <ExperienceCard image={require('../resources/logo_msa.png')}
-                            jobDescr={"Student Economist"} jobTime={"Sep 2022 - December 2022"}></ExperienceCard>
+                            jobDescr={"Student Economist"} jobTime={"Sep 2022 - December 2022"} jobText={msa2_text}></ExperienceCard>
 
 
                         <ExperienceCard image={require('../resources/logo_msa.png')}
                                         jobDescr={"Summer Student"} 
                                         jobTime={"May 2022 - Sep 2022"}
-                                        jobText={"Hello"}
+                                        jobText={msa1_text}
 
                             ></ExperienceCard>
                             

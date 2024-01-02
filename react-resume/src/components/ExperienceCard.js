@@ -73,7 +73,7 @@ export default function ExperienceCard(props) {
                 unmountOnExit>
                 <CardContent>
                     <Container sx={{
-                        height: 100,
+                        maxHeight: 200,
                         lineHeight: 2,
                         fontFamily:"Open Sans",
                         fontSize:{xs: "10px", md:"15px"},

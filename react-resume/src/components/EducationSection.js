@@ -11,7 +11,7 @@ import '../index.css'
 import '../App.css'
 import ExperienceCard from './ExperienceCard';
 
-import { bwb_text } from '../resources/stringConsts.js'
+import { bwb_text, compsci_text, econ_text} from '../resources/stringConsts.js'
 
 import Typography from '@mui/material/Typography';
 import { createTheme, makeStyles, ThemeProvider } from '@mui/material/styles';
@@ -61,11 +61,11 @@ const EducationSection = forwardRef((props, ref) => {
                     <ExperienceCard image={require('../resources/logo_uofc.png')}
                         jobDescr={"BSc. Computer Science"}
                         jobTime={"Jan 2020 - Present"}
-                        jobText={bwb_text}
+                        jobText={compsci_text}
                     ></ExperienceCard>
 
                     <ExperienceCard image={require('../resources/logo_uofc.png')}
-                        jobDescr={"BA. Economics"} jobTime={"Sep 2018 - Present"}></ExperienceCard>
+                        jobDescr={"BA. Economics"} jobTime={"Sep 2018 - Present"} jobText={econ_text}></ExperienceCard>
 
                 </Grid>
             </Grid>
