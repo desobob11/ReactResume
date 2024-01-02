@@ -13,6 +13,7 @@ import EducationSection from './EducationSection';
 import Ellipses from './Ellipses';
 import MobileBar from './MobileBar';
 import ProjectSection from './ProjectSection';
+import ContactSection from './ContactsSection';
 
 
 import Typography from '@mui/material/Typography';
@@ -30,12 +31,12 @@ export default function Homepage() {
     const Navigation = () => {
         if (screenWidth >= 800) {
             return (
-                <Navbar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef} projectRef={projectRef}></Navbar>
+                <Navbar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef} projectRef={projectRef} contRef={contRef}></Navbar>
             );
         }
         else {
             return (
-                <MobileBar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef} projectRef={projectRef}></MobileBar>
+                <MobileBar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef} projectRef={projectRef} contRef={contRef}></MobileBar>
             );
         }
     }
@@ -71,6 +72,7 @@ export default function Homepage() {
     const experienceRef = useRef(null);
     const educationRef = useRef(null);
     const projectRef = useRef(null)
+    const contRef = useRef(null)
 
 
 
@@ -100,6 +102,12 @@ export default function Homepage() {
             <Grid item>
                 <ProjectSection  ref={projectRef}/>
             </Grid>
+            <Grid item>
+                <Ellipses />
+            </Grid>
+                <Grid item>
+                    <ContactSection ref={contRef} />
+                </Grid>
 
 
         </Grid>

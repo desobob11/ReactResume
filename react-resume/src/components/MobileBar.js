@@ -19,6 +19,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import '../index.css'
 import '../App.css'
 import Brightness4 from '@mui/icons-material/Brightness4';
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 
 export default function MobileBar(props) {
     return (
@@ -46,6 +47,9 @@ export default function MobileBar(props) {
             }} />
             <BottomNavigationAction label="Projects" icon={<SquareFootOutlinedIcon />} onClick={() => {
                 props.projectRef.current.scrollIntoView({ behavior: "smooth" });
+            }} />
+            <BottomNavigationAction label="Contact" icon={<ContactPhoneIcon />} onClick={() => {
+                props.contRef.current.scrollIntoView({ behavior: "smooth" });
             }} />
         </BottomNavigation>
     );

@@ -15,6 +15,7 @@ import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSati
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import SquareFootOutlinedIcon from '@mui/icons-material/SquareFootOutlined';
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import '../index.css'
 import '../App.css'
@@ -103,6 +104,18 @@ export default function Navbar(props) {
                     <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" }, fontFamily: "Open Sans", fontWeight: "bold"  }}>
                         <Box className="navbar-text" t>
                             Projects
+                        </Box>
+                    </Typography>} />
+                </ListItemButton>
+                <ListItemButton sx={{ "&:hover": { backgroundColor: "transparent" } }} onClick={() => {
+                    props.contRef.current.scrollIntoView({ behavior: "smooth" });
+                }}>
+                    <ListItemIcon>
+                        <ContactPhoneIcon className="icon" sx={{ color: "DimGrey" }} />
+                    </ListItemIcon >
+                    <ListItemText primary={<Typography component="span" sx={{ "&:hover": { textDecoration: "underline" }, fontFamily: "Open Sans", fontWeight: "bold" }}>
+                        <Box className="navbar-text" t>
+                            Contact
                         </Box>
                     </Typography>} />
                 </ListItemButton>
