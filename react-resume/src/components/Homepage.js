@@ -12,6 +12,7 @@ import '../App.css'
 import EducationSection from './EducationSection';
 import Ellipses from './Ellipses';
 import MobileBar from './MobileBar';
+import ProjectSection from './ProjectSection';
 
 
 import Typography from '@mui/material/Typography';
@@ -24,10 +25,10 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link} from '@mui/
 
 export default function Homepage() {
 
-    const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const Navigation = () => {
-        if (screenHeight >= 768) {
+        if (screenWidth >= 800) {
             return (
                 <Navbar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef}></Navbar>
             );
@@ -41,7 +42,7 @@ export default function Homepage() {
 
     useEffect(() => {
         const checkSize = () => {
-            setScreenHeight(window.innerHeight);
+            setScreenWidth(window.innerWidth);
         }
         window.addEventListener('resize', checkSize);
     }, []);
@@ -69,6 +70,7 @@ export default function Homepage() {
     const aboutRef = useRef(null);
     const experienceRef = useRef(null);
     const educationRef = useRef(null);
+    const projectRef = useRef(null)
 
 
 
@@ -94,6 +96,15 @@ export default function Homepage() {
             </Grid>
             <Grid item>
                 <Ellipses />
+            </Grid>
+            <Grid item>
+                <ProjectSection  ref={projectRef}/>
+            </Grid>
+            <Grid item>
+                <Ellipses />
+            </Grid>
+            <Grid item>
+                <ProjectSection ref={projectRef} />
             </Grid>
 
         </Grid>
