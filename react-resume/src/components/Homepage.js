@@ -11,6 +11,7 @@ import ExperienceSection from './ExperienceSection';
 import '../App.css'
 import EducationSection from './EducationSection';
 import Ellipses from './Ellipses';
+import MobileBar from './MobileBar';
 
 
 import Typography from '@mui/material/Typography';
@@ -22,6 +23,28 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link} from '@mui/
 
 
 export default function Homepage() {
+
+    const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+
+    const Navigation = () => {
+        if (screenHeight >= 768) {
+            return (
+                <Navbar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef}></Navbar>
+            );
+        }
+        else {
+            return (
+                <MobileBar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef}></MobileBar>
+            );
+        }
+    }
+
+    useEffect(() => {
+        const checkSize = () => {
+            setScreenHeight(window.innerHeight);
+        }
+        window.addEventListener('resize', checkSize);
+    }, []);
 
 
     const thisTheme = createTheme({
@@ -52,7 +75,7 @@ export default function Homepage() {
     return (
         <ThemeProvider theme={thisTheme}>
             <CssBaseline />
-            <Navbar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef}></Navbar>
+            <Navigation></Navigation>
         <Grid  container direction="column" justifyContent="flex-start" alignItems="stretch" rowSpacing={0}>
             <Grid item >
                 <AboutSection className={"main-fade"} ref={aboutRef}></AboutSection>
@@ -72,7 +95,6 @@ export default function Homepage() {
             <Grid item>
                 <Ellipses />
             </Grid>
-
 
         </Grid>
         </ThemeProvider>

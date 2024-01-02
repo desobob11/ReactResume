@@ -8,7 +8,7 @@ import Navbar from './Navbar';
 
 import Typography from '@mui/material/Typography';
 import { createTheme, makeStyles, ThemeProvider } from '@mui/material/styles';
-import { TableBody, TableHead, TableRow, Box, Divider, Button, Link } from '@mui/material';
+import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Avatar } from '@mui/material';
 /*
 
 
@@ -32,10 +32,10 @@ export default function Headshot(props) {
 
 
     return (
-            <Box sx={props.sx}
-        component="img"
+            <Avatar sx={props.sx}
+
         src={require('../resources/headshot.jpg')}
-        ></Box>
+        ></Avatar>
 
 
 

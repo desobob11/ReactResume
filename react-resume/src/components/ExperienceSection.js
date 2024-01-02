@@ -52,8 +52,8 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, C
                     <Grid item xs={8} sx={{ width: "100px" }}>
                         <Typography ref={ref} className="scrollable"  variant="h1" sx={{
                             fontFamily: "Open Sans",
-                            marginLeft: "182px",
-                            fontSize:"60px"
+                            marginLeft: "10vw",
+                            fontSize: { xs: "3rem", md: "4rem" }
                         }}>
                             Experience
                         </Typography>

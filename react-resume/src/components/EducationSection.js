@@ -46,25 +46,17 @@ const EducationSection = forwardRef((props, ref) => {
         }}>
 
 
+
             <Grid item xs={8} display='flex' sx={{
             }}>
 
                 <Grid item xs={8} sx={{ width: "100px" }}>
                     <Typography ref={ref} className="scrollable" variant="h1" sx={{
                         fontFamily: "Open Sans",
-                        marginLeft: "182px",
-                        fontSize: "60px"
+                        marginLeft: "10vw",
+                        fontSize: { xs: "3rem", md: "4rem" }
                     }}>
                         Education
-                    </Typography>
-                    <Typography sx={{
-                        fontFamily: "Open Sans",
-                        marginLeft: "190px",
-                        marginTop: "10px",
-                        fontSize: 30,
-                        width: "100",
-                        width: "40vw"
-                    }}>
                     </Typography>
                     <ExperienceCard image={require('../resources/logo_uofc.png')}
                         jobDescr={"BSc. Computer Science"}

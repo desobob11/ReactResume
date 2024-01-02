@@ -42,36 +42,37 @@ const AboutSection = forwardRef((props, ref) => {
         <Grid className={'non-scrollable fader'} ref={ref} container spacing={2} sx={{
             marginTop: "15vh",
             marginBottom: "40px",
-            opacity:0
+            opacity:0,
+            width:"100vw"
         }}>
 
-            <Grid item xs={8} display='flex'>
+            <Grid item xs={8} display='flex' >
                 <Headshot sx={{
-                    height: "400px",
-                    width: "400px",
-                    borderRadius: "50%",
-                    marginLeft: "25%",
+                    display:"block",
+                    height:"30vw",
+                    width:"auto",
+                    marginLeft: "15vw",
                     boxShadow: 15
                 }}
                 ></Headshot>
-                <Grid item xs={8} sx={{ width: "100px" }}>
+                <Grid item xs={8} sx={{ width: "10vw" }}>
                     <Typography variant="h1" sx={{
                         fontFamily: "Open Sans",
-                        marginLeft: "182px"
+                        marginLeft: "10vw",
+                        fontSize: { xs: "4rem", md: "7rem" }
                     }}>
                         Hi!
                     </Typography>
                     <Typography sx={{
                         fontFamily: "Open Sans",
-                        marginLeft: "190px",
+                        marginLeft: "10vw",
                         marginTop: "10px",
-                        fontSize: 30,
-                        width: "100",
-                        width: "40vw"
+                        fontSize: {xs: "0.8rem", md:"1.5rem"},
+                        width: "30vw"
                     }}>
                         My name is Desmond O'Brien. I am a Computer Science and Economics student at the University of Calgary.
                         <p></p>
-                        I am deeply passionate about software development, and you can usually find me rolling up my sleeves to tackle my next projet.
+                        I am deeply passionate about software development, and you can usually find me rolling up my sleeves to tackle my next project.
 
                     </Typography>
                 </Grid>

@@ -45,13 +45,13 @@ export default function ExperienceCard(props) {
                 <CardMedia
                 component="img"
                 image={props.image}
-                sx={{justifySelf:"left", height:"100px", width:"200px", objectFit:"contain", marginLeft:"10px"}}
+                sx={{justifySelf:"left", height:"auto", width:"15%", objectFit:"contain", marginLeft:"10px"}}
                 ></CardMedia>
                 <CardContent sx={{marginLeft:"auto"}}>
-                <Typography align="right" sx={{fontFamily:"Open Sans", fontSize:"20px", fontWeight:"bold"}}>
+                        <Typography align="right" sx={{ fontFamily: "Open Sans", fontSize: { xs: "10px", md: "20px" }, fontWeight:"bold"}}>
                     {props.jobDescr}
                 </Typography>
-                        <Typography align="right" sx={{ fontFamily: "Open Sans", fontSize: "15px", alight:"right"}}>
+                        <Typography align="right" sx={{ fontFamily: "Open Sans", fontSize:{xs: "10px", md:"15px"} , alight:"right"}}>
                     {props.jobTime}
                 </Typography>
                 
@@ -76,7 +76,7 @@ export default function ExperienceCard(props) {
                         height: 100,
                         lineHeight: 2,
                         fontFamily:"Open Sans",
-                        fontSize:"15px",
+                        fontSize:{xs: "10px", md:"15px"},
                         color:"DimGrey"
                     }}>
                         {props.jobText}
