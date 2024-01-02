@@ -94,7 +94,9 @@ export default function Navbar(props) {
                         </Box>
                     </Typography>} />
                 </ListItemButton>
-                <ListItemButton sx={{ "&:hover": { backgroundColor: "transparent" } }}>
+                <ListItemButton sx={{ "&:hover": { backgroundColor: "transparent" } }} onClick={() => {
+                    props.projectRef.current.scrollIntoView({ behavior: "smooth" });
+                }}>
                     <ListItemIcon>
                         <SquareFootOutlinedIcon className="icon" sx={{ color: "DimGrey" }} />
                     </ListItemIcon >

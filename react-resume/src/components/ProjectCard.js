@@ -28,6 +28,7 @@ import KeyboardArrowUpIcon from
 import Typography from '@mui/material/Typography';
 import { createTheme, makeStyles, ThemeProvider } from '@mui/material/styles';
 import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, Container, CardContent, Card, CardActionArea, CardMedia, IconButton, CardActions } from '@mui/material';
+import GitHub from '@mui/icons-material/GitHub';
 
 
 export default function ProjectCard(props) {
@@ -36,23 +37,26 @@ export default function ProjectCard(props) {
 
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, height:"60vh"}}>
             <CardMedia
-                sx={{ height: 140 }}
-                image="/static/images/cards/contemplative-reptile.jpg"
-                title="green iguana"
+                sx={{ height:"30vh", objectFit: "contain"}}
+                image={props.projImg}
             />
             <CardContent>
                 <Typography gutterBottom sx={{ fontSize: { xs: "15px", md: "30px" }, fontFamily:"Open Sans"}}>
-                    Lizard
+                    {props.projTitle}
                 </Typography>
                 <Typography sx={{ fontSize: { xs: "10px", md: "15px" }, fontFamily: "Open Sans" }}>
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                    {props.projDescr}
                 </Typography>
             </CardContent>
-            <CardActions>
-                <GitHubIcon sx={{color:"DimGrey"}} fontSize="large">Share</GitHubIcon>
+            <CardActions >
+                <IconButton sx={{color:"DimGrey"}} disableRipple
+                onClick={() => {
+                    const newWindow = window.open(props.projLink, '_blank', 'noopener,noreferrer')
+                    if (newWindow) newWindow.opener = null
+                }}
+                ><GitHubIcon></GitHubIcon></IconButton>
             </CardActions>
         </Card>
     );

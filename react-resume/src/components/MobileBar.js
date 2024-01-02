@@ -34,7 +34,8 @@ export default function MobileBar(props) {
             showLabels
 
         >
-            <BottomNavigationAction label="Amout Me" icon={<SentimentSatisfiedAltOutlinedIcon />} onClick={() => {
+            
+            <BottomNavigationAction label="About Me" icon={<SentimentSatisfiedAltOutlinedIcon />} onClick={() => {
                 props.aboutRef.current.scrollIntoView({ behavior: "smooth" });
             }} />
             <BottomNavigationAction label="Experience" icon={<WorkOutlineOutlinedIcon />} onClick={() => {
@@ -44,7 +45,7 @@ export default function MobileBar(props) {
                 props.educationRef.current.scrollIntoView({ behavior: "smooth" });
             }} />
             <BottomNavigationAction label="Projects" icon={<SquareFootOutlinedIcon />} onClick={() => {
-                props.experienceRef.current.scrollIntoView({ behavior: "smooth" });
+                props.projectRef.current.scrollIntoView({ behavior: "smooth" });
             }} />
         </BottomNavigation>
     );

@@ -74,14 +74,8 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, C
                                         jobText={"Hello"}
 
                             ></ExperienceCard>
-                        <ExperienceCard image={require('../resources/logo_rbc.png')}
-                            jobDescr={"Client Advisor"} jobTime={"May 2021 - Oct 2021"}></ExperienceCard>
-                        <ExperienceCard image={require('../resources/logo_nissan.png')}
-                            jobDescr={"Auto Detailer"} jobTime={"Mar 2021 - May 2021"}></ExperienceCard>
-                        <ExperienceCard image={require('../resources/logo_depot.png')}
-                            jobDescr={"Retail Sales Associate"} jobTime={"Sep 2020 - Dec 2020"}></ExperienceCard>
-                        <ExperienceCard image={require('../resources/logo_safeway.png')}
-                            jobDescr={"Starbucks Barista"} jobTime={"Mar 2017 - Sep 2020"}></ExperienceCard>
+                            
+                 
                     </Grid>
                 </Grid>
 
@@ -99,3 +93,14 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, C
     })
     
 export default ExperienceSection
+
+/*
+    < ExperienceCard image = { require('../resources/logo_rbc.png') }
+jobDescr = { "Client Advisor"} jobTime = { "May 2021 - Oct 2021"} ></ExperienceCard >
+                        <ExperienceCard image={require('../resources/logo_nissan.png')}
+                            jobDescr={"Auto Detailer"} jobTime={"Mar 2021 - May 2021"}></ExperienceCard>
+                        <ExperienceCard image={require('../resources/logo_depot.png')}
+                            jobDescr={"Retail Sales Associate"} jobTime={"Sep 2020 - Dec 2020"}></ExperienceCard>
+                        <ExperienceCard image={require('../resources/logo_safeway.png')}
+                            jobDescr={"Starbucks Barista"} jobTime={"Mar 2017 - Sep 2020"}></ExperienceCard>
+                            */

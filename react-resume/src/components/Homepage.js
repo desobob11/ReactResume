@@ -30,12 +30,12 @@ export default function Homepage() {
     const Navigation = () => {
         if (screenWidth >= 800) {
             return (
-                <Navbar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef}></Navbar>
+                <Navbar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef} projectRef={projectRef}></Navbar>
             );
         }
         else {
             return (
-                <MobileBar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef}></MobileBar>
+                <MobileBar aboutRef={aboutRef} experienceRef={experienceRef} educationRef={educationRef} projectRef={projectRef}></MobileBar>
             );
         }
     }
@@ -100,12 +100,7 @@ export default function Homepage() {
             <Grid item>
                 <ProjectSection  ref={projectRef}/>
             </Grid>
-            <Grid item>
-                <Ellipses />
-            </Grid>
-            <Grid item>
-                <ProjectSection ref={projectRef} />
-            </Grid>
+
 
         </Grid>
         </ThemeProvider>
