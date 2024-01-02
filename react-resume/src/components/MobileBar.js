@@ -28,8 +28,8 @@ export default function MobileBar(props) {
             zIndex:1,
             bottom:"0%",
             backgroundColor:"LightGrey",
-            borderTopLeftRadius: "50px",
-            borderTopRightRadius: "50px"
+            borderTopLeftRadius: "15px",
+            borderTopRightRadius: "15px"
         }}
             showLabels
 

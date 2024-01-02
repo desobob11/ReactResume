@@ -42,15 +42,14 @@ const AboutSection = forwardRef((props, ref) => {
         <Grid className={'non-scrollable fader'} ref={ref} container spacing={2} sx={{
             marginTop: "15vh",
             marginBottom: "40px",
-            opacity:0,
-            width:"100vw"
+            opacity:0
         }}>
 
             <Grid item xs={8} display='flex' >
                 <Headshot sx={{
                     display:"block",
                     height:"30vw",
-                    width:"auto",
+                    width:"30vw",
                     marginLeft: "15vw",
                     boxShadow: 15
                 }}
