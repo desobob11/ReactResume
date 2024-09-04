@@ -60,7 +60,7 @@ import { TableBody, TableHead, TableRow, Box, Divider, Button, Link, Collapse, C
 
                         <ExperienceCard image={require('../resources/logo_bwb.png')}
                                         jobDescr={"Jr. Systems Analyst"}
-                                        jobTime={"May 2023 - Present"}
+                                        jobTime={"May 2023 - Aug 2024"}
                                         jobText={bwb_text}
                          ></ExperienceCard>
 
